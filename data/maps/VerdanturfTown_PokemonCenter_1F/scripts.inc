@@ -18,6 +18,32 @@ VerdanturfTown_PokemonCenter_1F_EventScript_Nurse::
 	release
 	end
 
+VerdanturfTown_Mart_EventScript_Clerk::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart VerdanturfTown_Mart_Pokemart
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+VerdanturfTown_Mart_Pokemart:
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_NEST_BALL
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_REPEL
+	.2byte ITEM_X_SP_ATK
+	.2byte ITEM_FLUFFY_TAIL
+	.2byte ITEM_NONE
+	release
+	end
+
 VerdanturfTown_PokemonCenter_1F_EventScript_Gentleman::
 	msgbox VerdanturfTown_PokemonCenter_1F_Text_FaithInYourPokemon, MSGBOX_NPC
 	end
